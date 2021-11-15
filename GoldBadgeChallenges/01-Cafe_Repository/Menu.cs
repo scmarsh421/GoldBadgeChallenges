@@ -11,7 +11,7 @@ namespace _01_Cafe_Repository
         public int MealNumber { get; set; }
         public string MealName { get; set; }
         public string MealDescription { get; set; }
-        public string MealIngredients { get; set; } //could a list be a property?
+        public string MealIngredients { get; set; } 
         public decimal MealPrice { get; set; }
 
         public Menu() { } 
