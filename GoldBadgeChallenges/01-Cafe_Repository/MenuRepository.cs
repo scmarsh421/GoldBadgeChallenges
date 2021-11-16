@@ -11,21 +11,21 @@ namespace _01_Cafe_Repository
         private List<Menu> _listOfMenuItems = new List<Menu>();
 
         //Create
-        public void AddItemToMenuList(Menu menu)
+        public void AddItem(Menu menu)
         {
             _listOfMenuItems.Add(menu);
         }
 
         //Read
-        public List<Menu> GetMenuItemsList()
+        public List<Menu> GetAllItems()
         {
             return _listOfMenuItems;
         }
 
         //Delete
-        public bool RemoveMenuItemFromList(string mealName)
+        public bool RemoveItem(string mealName)
         {
-            Menu menu = GetMenuItemByMealName(mealName);
+            Menu menu = GetItemByName(mealName);
 
             if (menu == null)
             {
@@ -47,7 +47,7 @@ namespace _01_Cafe_Repository
         }
 
         //Get Item by mealName for delete method
-        private Menu GetMenuItemByMealName(string mealName)
+        private Menu GetItemByName(string mealName)
         {
             foreach (Menu menu in _listOfMenuItems)
             {

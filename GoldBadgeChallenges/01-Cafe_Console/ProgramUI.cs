@@ -61,7 +61,7 @@ namespace _01_Cafe_Console
         {
             Console.Clear();
 
-            List<Menu> listOfitems = _menuRepo.GetMenuItemsList();
+            List<Menu> listOfitems = _menuRepo.GetAllItems();
 
             foreach (Menu menu in listOfitems)
             {
@@ -117,7 +117,7 @@ namespace _01_Cafe_Console
             Console.WriteLine("Enter the price of the meal");
             newMenu.MealPrice = decimal.Parse(Console.ReadLine());
 
-            _menuRepo.AddItemToMenuList(newMenu);
+            _menuRepo.AddItem(newMenu);
 
         }
 
@@ -127,7 +127,7 @@ namespace _01_Cafe_Console
             DisplayMenu();
             Console.WriteLine("Please enter the name of the item you want to delete");
             string input = Console.ReadLine();
-            bool wasDeleted = _menuRepo.RemoveMenuItemFromList(input);
+            bool wasDeleted = _menuRepo.RemoveItem(input);
             if (wasDeleted)
             {
                 Console.WriteLine("Item was successfully deleted...");

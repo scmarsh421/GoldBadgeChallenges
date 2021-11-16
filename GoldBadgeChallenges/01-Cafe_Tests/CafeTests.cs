@@ -4,11 +4,14 @@ using System;
 namespace _01_Cafe_Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class CafeTests
     {
+
         [TestMethod]
-        public void TestMethod1()
+        public void AddItem()
         {
+            MenuRepository menuRepoTest = new MenuRepository();
+            
         }
     }
 }
