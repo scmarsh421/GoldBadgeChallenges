@@ -12,7 +12,6 @@ namespace _01_Cafe_Console
         private MenuRepository _menuRepo = new MenuRepository();
         public void Run()
         {
-            CreatePlaceholderItems();
             Cafe();
         }
         private void Cafe()
@@ -56,19 +55,17 @@ namespace _01_Cafe_Console
 
             }
         }
-        //so that there items on the menu to read
-        private void CreatePlaceholderItems()
-        {
-            //Menu potato = new Menu(1, "Potato", "One delicious, baked, and buttered pound of tater.", ""
-        }
 
         //(READ) 1. Look at Menu
         private void DisplayListOfMenuItems()
         {
+            Console.Clear();
+
             List<Menu> listOfitems = _menuRepo.GetMenuItemsList();
+
             foreach (Menu menu in listOfitems)
             {
-                string itemPrint = $"#{menu.MealNumber} {menu.MealName}      {menu.MealPrice}\n" +
+                string itemPrint = $"#{menu.MealNumber} {menu.MealName}      ${menu.MealPrice}\n" +
                     $"{menu.MealDescription}\n" +
                     $"Ingredients:";
 
@@ -77,6 +74,7 @@ namespace _01_Cafe_Console
                     itemPrint += "\n" + ingredient; // shorthand of: itemPrint = itemPrint + "\n" + ingredient;
                 }
                 Console.WriteLine(itemPrint);
+                Console.WriteLine("___________________________________________");
             }
         }
         //(CREATE) 2. Add a new item to the menu 
@@ -110,7 +108,7 @@ namespace _01_Cafe_Console
                 Console.WriteLine("Do you want to add more ingredients? y/n");
                 string yesNo = Console.ReadLine();
                 if (yesNo == "n") { allIngredientsAdded = true; }
-                else if(yesNo == "y") { allIngredientsAdded = false; }
+                else if (yesNo == "y") { allIngredientsAdded = false; }
             }
             newMenu.MealIngredients = newListOfIngredients;
 
