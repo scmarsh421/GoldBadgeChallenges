@@ -13,7 +13,11 @@ namespace _01_Cafe_Repository
         //Create
         public void AddItem(Menu menu)
         {
+            //int startingCount = _listOfMenuItems.Count; 
             _listOfMenuItems.Add(menu);
+
+            //bool wasAdded = (_listOfMenuItems.Count > startingCount) ? true : false;
+            
         }
 
         //Read
