@@ -11,11 +11,11 @@ namespace _01_Cafe_Repository
         public int MealNumber { get; set; }
         public string MealName { get; set; }
         public string MealDescription { get; set; }
-        public string MealIngredients { get; set; } 
+        public List<string> MealIngredients { get; set; } 
         public decimal MealPrice { get; set; }
 
         public Menu() { } 
-        public Menu(int mealNumber, string mealName, string mealDescription, string mealIngredients, decimal mealPrice)
+        public Menu(int mealNumber, string mealName, string mealDescription, List<string> mealIngredients, decimal mealPrice)
         {
             MealNumber = mealNumber;
             MealName = mealName;

@@ -7,4 +7,3 @@ C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Console\o
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Console\obj\Debug\01-Cafe_Console.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Console\obj\Debug\01-Cafe_Console.exe
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Console\obj\Debug\01-Cafe_Console.pdb
-C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Console\obj\Debug\01-Cafe_Console.csproj.CopyComplete
