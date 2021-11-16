@@ -21,31 +21,37 @@ namespace _01_Cafe_Repository
         {
             return _listOfMenuItems;
         }
-        
+
         //Delete
         public bool RemoveMenuItemFromList(string mealName)
         {
             Menu menu = GetMenuItemByMealName(mealName);
-            
-            if(menu == null)
+
+            if (menu == null)
             {
                 return false;
+            }
+
+            int initialCount = _listOfMenuItems.Count;
+            _listOfMenuItems.Remove(menu);
+
+            if (initialCount > _listOfMenuItems.Count)
+            {
+                return true;
             }
             else
             {
                 return false;
             }
-            
-            
 
         }
 
-        //Get Item by mealName
+        //Get Item by mealName for delete method
         private Menu GetMenuItemByMealName(string mealName)
         {
             foreach (Menu menu in _listOfMenuItems)
             {
-                if(menu.MealName ==mealName)
+                if (menu.MealName == mealName)
                 {
                     return menu;
                 }

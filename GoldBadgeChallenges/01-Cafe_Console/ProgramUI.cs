@@ -32,13 +32,13 @@ namespace _01_Cafe_Console
                 switch (input)
                 {
                     case "1": //Look at the menu
-                        DisplayListOfMenuItems();
+                        DisplayMenu();
                         break;
                     case "2": //Add a new item to the menu
                         CreateNewItem();
                         break;
                     case "3": //Delete an item from the menu
-
+                        DeleteMenuItem();
                         break;
                     case "4": //Exit Menu Editor
                         keepRunning = false;
@@ -57,7 +57,7 @@ namespace _01_Cafe_Console
         }
 
         //(READ) 1. Look at Menu
-        private void DisplayListOfMenuItems()
+        private void DisplayMenu()
         {
             Console.Clear();
 
@@ -77,6 +77,7 @@ namespace _01_Cafe_Console
                 Console.WriteLine("___________________________________________");
             }
         }
+
         //(CREATE) 2. Add a new item to the menu 
         private void CreateNewItem()
         {
@@ -119,6 +120,26 @@ namespace _01_Cafe_Console
             _menuRepo.AddItemToMenuList(newMenu);
 
         }
+
+        //(DELETE) 3. Delete an item from the menu
+        private void DeleteMenuItem()
+        {
+            DisplayMenu();
+            Console.WriteLine("Please enter the name of the item you want to delete");
+            string input = Console.ReadLine();
+            bool wasDeleted = _menuRepo.RemoveMenuItemFromList(input);
+            if (wasDeleted)
+            {
+                Console.WriteLine("Item was successfully deleted...");
+                Console.WriteLine("Good riddance!");
+            }
+            else
+            {
+                Console.WriteLine("Item could not be deleted...");
+                Console.WriteLine("Maybe you typed the wrong name.");
+            }
+        }
+        
 
 
     }
