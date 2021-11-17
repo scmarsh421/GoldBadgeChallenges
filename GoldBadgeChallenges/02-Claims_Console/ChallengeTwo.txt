@@ -72,3 +72,5 @@ Your goal is to do the following:
 2. Create a ClaimRepository class that has proper methods.
 3. Create a Test Class for your repository methods.
 4. Create a Program file that allows a claims manager to manage items in a list of claims.
+
+//https://docs.microsoft.com/en-us/dotnet/api/system.collections.queue?view=net-5.0 

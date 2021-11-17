@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChallengeTwo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\02-Claims_Repository\02-Claims_Repository.csproj">
+      <Project>{b19cecad-becd-40fd-8f8a-5f0e52451fc4}</Project>
+      <Name>02-Claims_Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
