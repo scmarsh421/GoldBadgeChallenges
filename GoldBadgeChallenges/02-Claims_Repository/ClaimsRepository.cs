@@ -23,39 +23,35 @@ namespace _02_Claims_Repository
         }
 
         //Take care of next claim ---When the agent presses 'y', the claim will be pulled off the top of the queue. If the agent presses 'n', it will go back to the main menu.
-        //public bool TakeCareOfClaim(int claimID)
-        //{
-        //    Claim claim = GetClaimByID(claimID);
-        //    if (claimID == null)
-        //    {
-        //        return false;
-        //    }
-        //    int initialClaimCount = _claims.Count;
-        //    _claims.Dequeue();
-        //    if (initialClaimCount > _claims.Count)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
+        public bool TakeCareOfClaim(int claimID)
+        {
+            Claim claim = GetClaimByID(claimID);
+            if (claim == null)
+            {
+                return false;
+            }
+            else
+            {
+                int initialClaimCount = _claims.Count;
+                _claims.Dequeue();
+                return true;
+            }
 
+        }
 
-        //}
-        ////Get claim by ID to dequeue in RemoveClaim
-        //private Claim GetClaimByID(int claimID)
-        //{
-        //    foreach (Claim claim in _claims)
-        //    {
-        //        if (claim.ClaimID == claimID)
-        //        {
-        //            return claim;
-        //        }
+        //Get claim by ID to dequeue in RemoveClaim
+        private Claim GetClaimByID(int claimID)
+        {
+            foreach (Claim claim in _claims)
+            {
+                if (claim.ClaimID == claimID)
+                {
+                    return claim;
+                }
 
-        //    }
-        //    return null;
-        //}
+            }
+            return null;
+        }
 
     }
 }
