@@ -7,4 +7,3 @@ C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\03-Badges_Console
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\03-Badges_Console\obj\Debug\03-Badges_Console.pdb
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\03-Badges_Console\bin\Debug\03-Badges_Repository.dll
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\03-Badges_Console\bin\Debug\03-Badges_Repository.pdb
-C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\03-Badges_Console\obj\Debug\03-Badges_Console.csproj.CopyComplete

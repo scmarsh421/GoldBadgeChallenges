@@ -10,15 +10,29 @@ namespace _03_Badges_Repository
     {
         //A badge repository that will have methods that do the following:
             //Create a dictionary of badges.
-        Dictionary<int, Badge> _badges = new Dictionary<int, Badge>() { };
-        public void CreateBadges(Badge badge)
-        {
-            _badges.Add(badge.BadgeID, badge);
-        }
-        
             //The key for the dictionary will be the BadgeID.
-            // int key = BadgeID
-            //The value for the dictionary will be the List of Door Names.
-            
+            //The value for the dictionary will be the List of Door Names.  
+        Dictionary<int, Badge> _badges = new Dictionary<int, Badge>() { };
+        public void AddBadgeToDictionary(Badge badge)
+        {
+            _badges.Add(badge.BadgeID, badge);//here is where key = ID 
+        }
+        public Dictionary<int, Badge> DisplayAllBadges()
+        {
+            return _badges;
+        }
+        public Badge GetBadgeByID(int input)
+        {
+            foreach (KeyValuePair<int, Badge> keyValuePair in _badges)
+            {
+                Badge badge = keyValuePair.Value;
+                if(input == keyValuePair.Key)
+                {
+                    return badge;
+                }
+
+            }
+            return null;
+        }
     }
 }
