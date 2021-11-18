@@ -6,11 +6,13 @@ Challenge 1: Komodo Cafe - Create a Menu Editor
     1. Add items to menu 
     2. Delete items from menu 
     3. See all items in the menu list.
+    
 Challenge 2: Komodo Claims Department - Create an App for viewing and taking care of claims 
     The Program will allow a claims manager to do the following:
     1. See all claims
     2. Take care of next claim
     3. Enter a new claim
+    
 Challenge 3: Komodo Insurance - Create a Badge System
     The Program will allow a security staff member to do the following:
     1. create a new badge
