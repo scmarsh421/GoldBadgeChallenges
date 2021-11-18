@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using _03_Badges_Repository;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace _03_Badges_Tests
@@ -9,6 +10,9 @@ namespace _03_Badges_Tests
         [TestMethod]
         public void TestMethod1()
         {
+            //Arrange
+            //Act
+            //Assert
         }
     }
 }

@@ -32,7 +32,6 @@ namespace _02_Claims_Repository
             }
             else
             {
-                int initialClaimCount = _claims.Count;
                 _claims.Dequeue();
                 return true;
             }
@@ -40,7 +39,7 @@ namespace _02_Claims_Repository
         }
 
         //Get claim by ID to dequeue in RemoveClaim
-        private Claim GetClaimByID(int claimID)
+        public Claim GetClaimByID(int claimID)
         {
             foreach (Claim claim in _claims)
             {
