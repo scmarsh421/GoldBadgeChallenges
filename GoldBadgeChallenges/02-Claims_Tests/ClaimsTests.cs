@@ -4,7 +4,7 @@ using System;
 namespace _02_Claims_Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class ClaimsTests
     {
         [TestMethod]
         public void TestMethod1()

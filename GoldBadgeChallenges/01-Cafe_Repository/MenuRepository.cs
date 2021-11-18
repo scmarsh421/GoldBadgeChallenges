@@ -51,7 +51,7 @@ namespace _01_Cafe_Repository
         }
 
         //Get Item by mealName for delete method
-        private Menu GetItemByName(string mealName)
+        public Menu GetItemByName(string mealName)
         {
             foreach (Menu menu in _listOfMenuItems)
             {

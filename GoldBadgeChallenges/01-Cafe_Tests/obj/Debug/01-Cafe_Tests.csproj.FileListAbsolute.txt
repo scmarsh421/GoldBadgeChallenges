@@ -13,4 +13,3 @@ C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Tests\obj
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Tests\obj\Debug\01-Cafe_Tests.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Tests\obj\Debug\01-Cafe_Tests.dll
 C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Tests\obj\Debug\01-Cafe_Tests.pdb
-C:\ElevenFiftyProjects\GoldBadgeChallenges\GoldBadgeChallenges\01-Cafe_Tests\obj\Debug\01-Cafe_Tests.csproj.CopyComplete

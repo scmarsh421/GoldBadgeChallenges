@@ -10,22 +10,54 @@ namespace _01_Cafe_Tests
     {
 
         [TestMethod]
-        public void AddItem_Test()
+        public void AddItem_ShouldGetNotNull() 
         {
-            ////Arrange
-            //Menu menuItemTest = new Menu();
-            //MenuRepository menuTest = new MenuRepository();
-            ////Act
-            //bool 
-            //-----------
-            //menuItemTest.MealName = "Meal Test";
-            //menuItemTest.MealDescription = "This is a test";
-            //List<string> testIngredients = new List<string> { "ingredient", "onion", "ogre tears" };
-            //menuItemTest.MealIngredients = testIngredients;
-            //menuItemTest.MealPrice = 60.00m;
-
-            //menuTest.AddItem(menuItemTest);
-            ////Assert.AreEqual(1, menuTest.GetAllItems().Count);
+            //Arrange
+            Menu menuTest = new Menu();
+            MenuRepository menuRepo = new MenuRepository();
+            menuTest.MealName = "Hot Pocket";
+            //Act
+            menuRepo.AddItem(menuTest);
+            Menu menuFromDirectory = menuRepo.GetItemByName("Hot Pocket");
+            //Assert
+            Assert.IsNotNull(menuFromDirectory);
         }
+        [TestMethod]
+        public void GetAllItems_ShouldGetNotNull()
+        {
+            //Arrange
+            Menu potato = new Menu();
+            MenuRepository menuRepo = new MenuRepository();
+            potato.MealNumber = 1;
+            potato.MealName = "Potato";
+            potato.MealDescription = "Big tater";
+            List<string> potatoIngredients = new List<string>() {"potato", "butter" };
+            potato.MealIngredients = potatoIngredients;
+            potato.MealPrice = 2.05m;
+            //Act
+            menuRepo.AddItem(potato);
+            menuRepo.GetAllItems();
+            //Assert
+            Assert.IsNotNull(potato);
+
+        } [TestMethod]
+        public void DeleteItem_ShouldReturnFalse()
+        {
+            //Arrange
+            Menu potato = new Menu();
+            MenuRepository menuRepo = new MenuRepository();
+            potato.MealNumber = 1;
+            potato.MealName = "Potato";
+            potato.MealDescription = "Big tater";
+            List<string> potatoIngredients = new List<string>() {"potato", "butter" };
+            potato.MealIngredients = potatoIngredients;
+            potato.MealPrice = 2.05m;
+            //Act
+            menuRepo.AddItem(potato);
+            menuRepo.RemoveItem(potato.MealName);
+            //Assert
+            Assert.IsFalse(menuRepo.RemoveItem(potato.MealName));
+        }
+
     }
 }
