@@ -17,7 +17,6 @@ namespace _03_Badges_Console
             BadgesMenu();
         }
 
-        //starter badges
         private void BadgesMenu()
         {
             bool keepRunning = true;
@@ -58,6 +57,7 @@ namespace _03_Badges_Console
 
             }
         }
+        //starter badges
         private void StarterBadges()
         {
             List<string> starterDoors = new List<string>() { "A1", "A7" }; // this is collection initializer syntax instead of add() method 
